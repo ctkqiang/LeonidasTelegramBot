@@ -66,8 +66,6 @@ class TelBot
                         ".gsub(" ","")
 
                         reply.text = response
-                    when "fuck" || "fuck you"
-                        
                     else
                         reply.text = "Do you mind clarify what #{command.inspect} means before I sparta kick you."
                     end 
