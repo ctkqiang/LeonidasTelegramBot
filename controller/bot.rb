@@ -21,6 +21,16 @@ class TelBot
         puts "Listening for Commands..."
 
         @@bot.get_updates(fail_silently: true) do |message|
+            '''
+            In Bots father, 
+            
+                start - Start the conversation with the KING!
+                crypto - Want to know where to trade crypto?
+                stocks - Want to know where to trade commondities, orex and stocks?
+                gold - Get current GOLD prices.
+                help - Want to get help.
+                
+            '''
 
             king_response = [
                 "Big mistake. I do not condone this behaviour in my Kingdom! THIS IS SPARTA!", 
