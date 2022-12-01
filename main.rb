@@ -1,4 +1,4 @@
-require_relative 'controller/bot.rb'
+require_relative "controller/bot.rb"
 
 =begin
 @@author John Melody Me<johnmelodyme@icloud.com>

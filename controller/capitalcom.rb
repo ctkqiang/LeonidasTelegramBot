@@ -1,13 +1,13 @@
-require 'httparty'
-require 'rubygems'
-require_relative '../configuration/credentials.rb'
+require "httparty"
+require "rubygems"
+require_relative "../configuration/credentials.rb"
 
 
 class CapitalCom 
     extend Gem::Deprecate
-    
+
     def initialize
-        @@capital_apikey = Credentials.new.env('CAPITALCOM_API_KEY')
+        @@capital_apikey = Credentials.new.env("CAPITALCOM_API_KEY")
         @@capital_session = "https://api-capital.backend-capital.com/api/v1/session/encryptionKey"
         @@capital_create_session = "https://api-capital.backend-capital.com/api/v1/session"
     end
@@ -17,7 +17,7 @@ class CapitalCom
             "X-CAP-API-KEY" => @@capital_apikey
         })
 
-        return JSON.parse(response.body)['encryptionKey']
+        return JSON.parse(response.body)["encryptionKey"]
     end
 
     '''
@@ -30,8 +30,8 @@ class CapitalCom
                 "X-CAP-API-KEY" => @@capital_apikey
             }, 
             :body => {
-                "identifier" => Credentials.new.env('CAPITALCOM_EMAIL'),
-	            "password" => Credentials.new.env('CAPITALCOM_PASSWORD') 
+                "identifier" => Credentials.new.env("CAPITALCOM_EMAIL"),
+	            "password" => Credentials.new.env("CAPITALCOM_PASSWORD") 
             }
         )
 
